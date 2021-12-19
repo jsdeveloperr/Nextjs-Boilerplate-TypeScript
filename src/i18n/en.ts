@@ -1,6 +1,6 @@
-import type { MyLocale } from '.';
+import type { GlobalLocale } from '.';
 
-export const table: MyLocale = {
+export const table: GlobalLocale = {
   locale: 'English',
   title: 'Next.js 12 + Rosetta with native i18n integration',
   subtitle: 'Click below to update your current locale 👇',

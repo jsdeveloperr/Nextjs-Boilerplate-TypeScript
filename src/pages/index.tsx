@@ -1,14 +1,14 @@
 import type { GetStaticProps } from 'next';
 import { useI18n, I18nProps } from 'next-rosetta';
 
-import type { MyLocale } from '../i18n';
+import type { GlobalLocale } from '../i18n';
 import { PwaAddToHomescreen } from '@/components/pwa-add-to-home-screen/pwa-add-to-home-screen';
 import { MainLayout } from '@/layout/main-layout';
 import { Meta } from '@/layout/Meta';
 import { Main } from '@/templates/Main';
 
 const Index = () => {
-  const i18n = useI18n<MyLocale>();
+  const i18n = useI18n<GlobalLocale>();
   const { t } = i18n;
   return (
     <Main
@@ -183,7 +183,7 @@ Index.getLayout = function getLayout(page: React.ReactElement) {
 
 // Server-side code
 export const getStaticProps: GetStaticProps<
-  I18nProps<MyLocale>
+  I18nProps<GlobalLocale>
 > = async context => {
   const locale = context.locale || context.defaultLocale;
   const { table = {} } = await import(`../i18n/${locale}`);

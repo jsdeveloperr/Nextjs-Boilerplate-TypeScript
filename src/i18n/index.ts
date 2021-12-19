@@ -1,4 +1,4 @@
-export interface MyLocale {
+export interface GlobalLocale {
   locale: string;
   title: string;
   subtitle: string;
