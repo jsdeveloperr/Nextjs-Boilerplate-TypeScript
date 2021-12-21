@@ -2,13 +2,13 @@
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
-const withPWA = require('next-pwa');
-const runtimeCaching = require('next-pwa/cache');
+// const withPWA = require('next-pwa');
+// const runtimeCaching = require('next-pwa/cache');
 const withPlugins = require('next-compose-plugins');
 const { ESBuildMinifyPlugin } = require('esbuild-loader');
 const { i18n } = require('./i18n');
 
-const isProd = process.env.NODE_ENV === 'production';
+// const isProd = process.env.NODE_ENV === 'production';
 // ESBUILD LOADER
 
 function useEsbuildMinify(config, options) {
@@ -36,7 +36,7 @@ function useEsbuildLoader(config, options) {
 }
 
 module.exports = withPlugins(
-  [withPWA, withBundleAnalyzer], // All next plugins go here
+  [withBundleAnalyzer], // All next plugins go here
   // Below is the main Next.js config object
   {
     poweredByHeader: false,
@@ -84,13 +84,13 @@ module.exports = withPlugins(
 
       return config;
     },
-    pwa: {
-      dest: 'public',
-      register: true,
-      skipWaiting: true,
-      runtimeCaching,
-      disable: !isProd,
-    },
+    // pwa: {
+    //   dest: 'public',
+    //   register: true,
+    //   skipWaiting: true,
+    //   runtimeCaching,
+    //   disable: !isProd,
+    // },
     i18n,
   }
 );
