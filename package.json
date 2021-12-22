@@ -23,7 +23,8 @@
     "test:unit:coverage": "jest --coverage",
     "test:unit:update": "jest --updateSnapshot",
     "test:e2e": "cypress run --config video=false --project ./e2e",
-    "test:e2e:ui": "cypress open --project ./e2e"
+    "test:e2e:ui": "cypress open --project ./e2e",
+    "tailwind": "tailwind-config-viewer -o -p 5002"
   },
   "dependencies": {
     "axios": "^0.24.0",
@@ -35,8 +36,7 @@
     "preact": "^10.6.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "sass": "^1.45.0",
-    "styled-jsx-plugin-postcss": "^4.0.1"
+    "sass": "^1.45.0"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^12.0.2",
@@ -73,7 +73,8 @@
     "stylelint-config-recommended-scss": "^5.0.2",
     "stylelint-order": "^5.0.0",
     "stylelint-scss": "^4.0.1",
-    "tailwindcss": "^3.0.0",
+    "tailwind-config-viewer": "^1.6.3",
+    "tailwindcss": "^3.0.7",
     "typescript": "^4.4.4"
   }
 }

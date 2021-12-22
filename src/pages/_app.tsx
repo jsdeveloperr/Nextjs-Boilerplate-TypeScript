@@ -4,7 +4,7 @@ import { NextPage } from 'next';
 import { I18nProvider } from 'next-rosetta';
 import { AppProps } from 'next/app';
 
-import '@/styles/main.css';
+import '@/styles/main.scss';
 import { DefaultLayout } from '@/layout/default-layout';
 
 type NextPageWithLayout = NextPage & {

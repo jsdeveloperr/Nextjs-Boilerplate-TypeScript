@@ -3,6 +3,7 @@ import { useI18n, I18nProps } from 'next-rosetta';
 
 import type { GlobalLocale } from '../i18n';
 // import { PwaAddToHomescreen } from '@/components/pwa-add-to-home-screen/pwa-add-to-home-screen';
+import Button from '@/components/button/button';
 import { MainLayout } from '@/layout/main-layout';
 import { Meta } from '@/layout/Meta';
 import { Main } from '@/templates/Main';
@@ -19,22 +20,23 @@ const Index = () => {
         />
       }
     >
+      <Button> Merhaba </Button>
       <a href="https://www.hangikredi.com/">
         <img
           src="https://cdn.hangikredi.com/images/slider/desktop-slider-(2)-desktop.jpg"
           alt="HangiKredi banner"
         />
       </a>
-      <h1 className="font-bold text-2xl">HangiKredi {t('locale')}</h1>
+      <h1 className="title">Hangi sKredi {t('locale')}</h1>
       <p>
         <span role="img" aria-label="rocket">
           🚀
-        </span>{' '}
+        </span>
         HangiKredi is a starter code for your Next js project by putting
-        developer experience first .{' '}
+        developer experience first .
         <span role="img" aria-label="zap">
           ⚡️
-        </span>{' '}
+        </span>
         Made with Next.js, TypeScript, ESLint, Prettier, Husky, Lint-Staged,
         VSCode, Netlify, PostCSS, Tailwind CSS.
       </p>

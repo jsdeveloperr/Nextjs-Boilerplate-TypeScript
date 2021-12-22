@@ -10,10 +10,10 @@ type IMainProps = {
 };
 
 const Main = (props: IMainProps) => (
-  <div className="antialiased w-full text-gray-700 px-1">
+  <div className="antialiased w-full flex justify-center">
     {props.meta}
-
-    <div className="max-w-screen-md mx-auto">
+    <div className="container">
+      <div className="dark:bg-yellow">Hangi Kredi Selam</div>
       <div className="border-b border-gray-300">
         <div className="pt-16 pb-8">
           <div className="font-bold text-3xl text-gray-900">
