@@ -1,71 +1,16 @@
-import type { GetStaticProps } from 'next';
-import { useI18n, I18nProps } from 'next-rosetta';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import React from 'react';
 
-import type { GlobalLocale } from '../i18n';
 import { Meta } from '@/layout/Meta';
-import { Main } from '@/templates/Main';
 
-// import { HomeProvider } from '@/stores/context/home-context';
-
-const About = () => {
-  const router = useRouter();
-  const i18n = useI18n<GlobalLocale>();
-  const { t } = i18n;
+const about = () => {
   return (
-    <Main
-      meta={
-        <Meta
-          title="HANGİKREDİ: En Avantajlı Teklifi Bul, Karşılaştır ve Başvur"
-          description="Kredi hesaplama, banka karşılaştırma ve kart başvuru işlemlerini hızlıca yap; kasko ve sigorta tekliflerini hangikredi.com ile hemen gör!"
-        />
-      }
-    >
-      <h1>{t('about.title')}</h1>
-      <p>{t('about.subtitle')}</p>
-      <ul>
-        {router.locales?.map(loc => (
-          <li key={loc}>
-            <Link href={router.asPath} locale={loc}>
-              <a className={loc === router.locale ? 'is-active' : ''}>{loc}</a>
-            </Link>
-          </li>
-        ))}
-      </ul>
-      <hr />
-      <Link href="/">Home</Link>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione fuga
-        recusandae quidem. Quaerat molestiae blanditiis doloremque possimus
-        labore voluptatibus distinctio recusandae autem esse explicabo molestias
-        officia placeat, accusamus aut saepe.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione fuga
-        recusandae quidem. Quaerat molestiae blanditiis doloremque possimus
-        labore voluptatibus distinctio recusandae autem esse explicabo molestias
-        officia placeat, accusamus aut saepe.
-      </p>
-    </Main>
+    <div>
+      <Meta
+        title="HANGİKREDİ: En Avantajlı Teklifi Bul, Karşılaştır ve Başvur"
+        description="Kredi hesaplama, banka karşılaştırma ve kart başvuru işlemlerini hızlıca yap; kasko ve sigorta tekliflerini hangikredi.com ile hemen gör!."
+      />
+    </div>
   );
 };
 
-export default About;
-
-// About.getLayout = function getLayout(page: React.ReactElement) {
-//   return <DefaultLayout>{page}</DefaultLayout>;
-// };
-
-// Server-side code
-export const getStaticProps: GetStaticProps<
-  I18nProps<GlobalLocale>
-> = async context => {
-  const locale = context.locale || context.defaultLocale;
-  const { table = {} } = await import(`../i18n/${locale}`);
-  return {
-    props: {
-      table,
-    },
-  }; // Passed to `/pages/_app.tsx`
-};
+export default about;

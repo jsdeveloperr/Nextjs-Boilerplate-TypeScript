@@ -1,7 +1,6 @@
 import { ReactElement, ReactNode } from 'react';
 
 import { NextPage } from 'next';
-import { I18nProvider } from 'next-rosetta';
 import { AppProps } from 'next/app';
 
 import '@/styles/main.scss';
@@ -20,11 +19,7 @@ function GlobalApp({ Component, pageProps }: AppPropsWithLayout) {
     Component.getLayout ||
     ((page: ReactNode) => <DefaultLayout>{page}</DefaultLayout>);
 
-  return (
-    <I18nProvider table={pageProps.table /* From getStaticProps */}>
-      {getLayout(<Component {...pageProps} />)}
-    </I18nProvider>
-  );
+  return getLayout(<Component {...pageProps} />);
 }
 
 export default GlobalApp;

@@ -6,7 +6,6 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 // const runtimeCaching = require('next-pwa/cache');
 const withPlugins = require('next-compose-plugins');
 const { ESBuildMinifyPlugin } = require('esbuild-loader');
-const { i18n } = require('./i18n');
 
 // const isProd = process.env.NODE_ENV === 'production';
 // ESBUILD LOADER
@@ -91,6 +90,5 @@ module.exports = withPlugins(
     //   runtimeCaching,
     //   disable: !isProd,
     // },
-    i18n,
   }
 );

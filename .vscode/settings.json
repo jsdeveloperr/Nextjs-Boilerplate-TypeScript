@@ -5,9 +5,6 @@
     "watch": false,
     "onSave": "test-file"
   },
-  "search.exclude": {
-    "package-lock.json": true
-  },
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
