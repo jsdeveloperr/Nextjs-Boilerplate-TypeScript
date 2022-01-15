@@ -1,7 +1,7 @@
 {
-  "name": "hangikredi-fe-next",
+  "name": "fe-next",
   "version": "1.0.0",
-  "description": "Kredi hesaplama, banka karşılaştırma ve kart başvuru işlemlerini hızlıca yap; kasko ve sigorta tekliflerini hangikredi.com ile hemen gör!",
+  "description": "next",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
