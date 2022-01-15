@@ -1,4 +1,4 @@
-# Hangi Kredi
+# Nextjs
 ### Features
 
 - 🔥 [Next.js](https://nextjs.org) for Static Site Generator
